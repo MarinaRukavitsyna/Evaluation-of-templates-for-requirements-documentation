@@ -111,8 +111,14 @@ If requirements texts are changed/new ones added, “Quality metrics.ipynb” ne
 
 ## Steps to Reproduce
 
+To reproduce the whole experiment, take the requirements from all "xxx free" sheets and rephrase them according to the respective template systems and enter these re-phrasings to the respective sheets (emptied before - despite formula). The Excel formula-based metrics will be calculated automatically. The 19 manual metrics have to be evaluated by a human reviewer and filled with 0 or 1 respectively.
+Calculate the redability metrics with an external tool (e.g. [https://readabilityformulas.com](https://readabilityformulas.com)) and enter the results to the respective cells named after the metric.
+To calculate the remaining metrics with the Python tool, follow the next steps:
+
 File: “Quality metrics.ipynb” in the Source folder.
+
 Input: The "TemplateComparisonAnalytics.xlsx" document in the Data folder. 
+
 Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data folder.
 
 - Open the “Quality metrics.ipynb” file in the jupyter notebook. 
@@ -121,17 +127,19 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 - Run the code and check the generated TemplateComparison_calculatedMetrics.xlsx document. 
 - You do not need to copy the processed data to the original document. All evaluated data from "TemplateComparison_calculatedMetrics.xlsx" should be linked automatically to "TemplateComparisonAnalytics.xlsx". If not, refresh workbook links. For this, press Data -> Workbook Links -> Refresh. Both files should be in the same folder.
 
+### Steps to extend the analysis 
 
 If you want to extend the document and add more data for analysis, do the following:
 
-- Clone a sheet from the "ReqSet Template" sheet of the TemplateComparisonAnalytics.xlsx document. 
+- Clone a sheet from the "empty sheet" sheet of the TemplateComparisonAnalytics.xlsx document. 
 - Give a meaningful name for the sheet. The presented document uses the following notation for this: "document name" + "template name". If requirements are written in a free form, "template name" is equal to "free". 
 - Add necessary requirements from the selected requirement document to the "Text" column: one requirement per row. 
 - Fill the "ID" and "name_of_template" columns if appropriate for your comparison. 
 - Assess the requirements for the presented quality metrics. 
 - Assess the requirements for the presented readability score metrics if applicable.
-- Some metrics can be evaluated by python code. To learn how to do this, take a look at the "How to evaluate particular quality metrics with python code" section.
-
+- Adjust links to sheet names on the summary sheet to get overview.
+- Some metrics can be evaluated by python code. To learn how to do this, take a look above.
+  - The respective sheet needs to be added also within the TemplateComparison_calculatedMetrics.xlsx document and the sheet name adapted in the workbook links on the sheet.
 
 If you would like to evaluate more metrics via code, do the following: 
 
@@ -141,10 +149,3 @@ If you would like to evaluate more metrics via code, do the following:
 - Add the processed column header name to the df.to_excel function in cell 22 to write it to the output file. 
 - Add links to the corresponding cells between "TemplateComparison_calculatedMetrics.xlsx" and "TemplateComparisonAnalytics.xlsx" documents to automatically copy evaluated data to the "TemplateComparisonAnalytics.xlsx" document 
 
-### Steps to extend the analysis 
-
-- Data on the summary sheet is updated automatically from the individual sheets. 
-- When more templates or documents are added, it is necessary to add series manually. 
-- Final readability and quality tables are based on the data from the Summary sheet, but not directly connected. So, if the Summary data is updated, it is necessary to update tables manually. 
-
-Requirements do not contain unnecessary information, such as examples or comments. Requirements are autonomous and thus they do have links with the textual segments which precede or follow them.
