@@ -83,13 +83,7 @@ Below, you will find links to instructions on how to install:
 
 ## Usage Instructions 
 
-### Steps to extend the analysis 
 
-- Each chart is based on data from the Summary sheet. So, if the Summary data is updated, charts will be updated automatically. 
-- When more templates or documents are added, it is necessary to add series manually. 
-- Final readability and quality tables are based on the data from the Summary sheet, but not directly connected. So, if the Summary data is updated, it is necessary to update tables manually. 
-
-Requirements do not contain unnecessary information, such as examples or comments. Requirements are autonomous and thus they do have links with the textual segments which precede or follow them. 
 
 ### How to evaluate particular quality metrics with python code
 
@@ -122,6 +116,7 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 - Run the code and check the generated TemplateComparison_calculatedMetrics.xlsx document. 
 - You do not need to copy the processed data to the original document. All evaluated data from "TemplateComparison_calculatedMetrics.xlsx" should be linked automatically to "TemplateComparisonAnalytics.xlsx". If not, refresh workbook links. For this, press Data -> Workbook Links -> Refresh. Both files should be in the same folder.
 
+
 ## Steps to Reproduce
 
 If you want to extend the document and add more data for analysis, do the following:
@@ -143,3 +138,10 @@ If you would like to evaluate more metrics via code, do the following:
 - Add the processed column header name to the df.to_excel function in cell 22 to write it to the output file. 
 - Add links to the corresponding cells between "TemplateComparison_calculatedMetrics.xlsx" and "TemplateComparisonAnalytics.xlsx" documents to automatically copy evaluated data to the "TemplateComparisonAnalytics.xlsx" document 
 
+### Steps to extend the analysis 
+
+- Data on the summary sheet is updated automatically from the individual sheets. 
+- When more templates or documents are added, it is necessary to add series manually. 
+- Final readability and quality tables are based on the data from the Summary sheet, but not directly connected. So, if the Summary data is updated, it is necessary to update tables manually. 
+
+Requirements do not contain unnecessary information, such as examples or comments. Requirements are autonomous and thus they do have links with the textual segments which precede or follow them.
