@@ -19,6 +19,7 @@ The repository contains different artifacts:
     - "Boilerplates" (Hull et al.)
     - "Bolierplates" (DODT)
     - SPIDER
+   - The requirement lists do *not* contain any additional project information or traceability liks
 - A metric suite with metrics to measure quality factors relevant to compare requirement template performance
   -  Metric definitions
   -  Tool support for metric calculation
@@ -81,11 +82,11 @@ Below, you will find links to instructions on how to install:
 
 ## Usage Instructions 
 
-The data within TemplateComparisonAnalytics.xlsx can be used to compare different template systems used to phrase the different variants of requirements documents among each other. 
+The data within TemplateComparisonAnalytics.xlsx and usertests.xlsx can be used to compare different template systems used to phrase the different variants of requirements documents among each other. It can be used to find differences and pecurlarities with respect to the metrics selected for the quality factors relevant for template systems.
+Further, the data can also be used to validate these metrics and in particlar the guideline rules behind them, e.g., through analysis of dependencies among metrics.
+The requirements samples can also be extracted and used for other analysis on the requirement texts. Similar, the metrics can also be used with other requirements, to extend the analysis. 
 
-## Steps to Reproduce
-
-In the Source folder, there is a python code to evaluate particular quality metrics. The processed metrics have the following header in the "TemplateComparisonAnalytics.xlsx" document: 
+The following columns in "TemplateComparisonAnalytics.xlsx" are updated through workbook links from "TemplateComparison_calculatedMetrics.xlsx":
 
 - "#syllables" 
 - "definite_articles?  (IR5,SR10-11)" 
@@ -104,9 +105,15 @@ In the Source folder, there is a python code to evaluate particular quality metr
 - "clear_quantifiers? (IR32+34,SR8+10-11,E106)" 
 - F-Score
 
+The two files should be in the same folder. As Excel stores absolute paths, the workbooklinks in "TemplateComparisonAnalytics.xlsx" have to be refreshed after download (Data -> Workbook Links -> Refresh, select the "TemplateComparison_calculatedMetrics.xlsx" file at its new location). 
+
+If requirements texts are changed/new ones added, “Quality metrics.ipynb” needs to be run to update these values. Follow "Steps to Reproduce" for this.
+
+## Steps to Reproduce
+
 File: “Quality metrics.ipynb” in the Source folder.
 Input: The "TemplateComparisonAnalytics.xlsx" document in the Data folder. 
-Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data folder. 
+Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data folder.
 
 - Open the “Quality metrics.ipynb” file in the jupyter notebook. 
 - Check the name of your document and excel name used in the pd.read_excel method. They should be equal. 
