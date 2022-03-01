@@ -6,8 +6,8 @@ This repository contains data and code related to experimentation on a compartiv
 
 The repository contains different artifacts:
 
-- A corpus of natural language requirements from five different projects in different domains:
-  - The "FLEX" requirements document is a system level specifiaction from a space flight/satellite project.  
+- A corpus of natural language requirements from five different projects in different domains (249 requirements):
+  - The "FLEX" requirements document is a system level specifiaction from a space flight/satellite project. 
   - The "CS E 50" requirements document (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
   - The "ECSS E60-30" requirements document is an ECSS standard from the aerospace domain.  
   - The "TSS (Time Sheet System)" requirements document specifies a work hour management system for student reasearch assistents at universities. (The requirements loosely follow the MASTeR Templates)  
@@ -18,6 +18,7 @@ The repository contains different artifacts:
     - "Advanced-EARS"
     - "Boilerplates" (Hull et al.)
     - "Bolierplates" (DODT)
+    - SPIDER
 - A metric suite with metrics to measure quality factors relevant to compare requirement template performance
   -  Metric definitions
   -  Tool support for metric calculation
@@ -28,15 +29,23 @@ The repository contains different artifacts:
 
 The repository contains two folders: 
 
-- Source: Python code to evaluate particular metrics, which can be found in the the "How to evaluate particular quality metrics with python code" section. 
+- Source: Python code to evaluate 14 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
-  - TemplateComparisonAnalytics.xlsx file, which contains:
-    - A requirement written in Natural Language (NL) in English.  
-    - Transformed requirements written with the selected template systems based on the corresponding NL requirement.  
-    - Assessed quality metrics.  
-    - Assessed readability metrics using the Readability Formulas web tool.  
-    - Summary (average) of the assessed quality metric values.  
-    - Graphs to analyze selected template systems.   
+  - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
+    - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates, boilerplates (DODT), SPIDER) + one "Empty Sheet" as a template for extension. Each such sheet contains
+      - one row per requirement with its id, text and 53 assessed quality metrics (19 manually, 20 Excel formula, 13 Python tool)
+      - a header with 72 aggregated metrics for the whole requirement set (1 Python tool, 12 readability formaly web tool, 59 Excel formula)  
+    - "Summary" sheet summarizing the metrics per set in a comapartive overview together with averages and other statistical values   
+    - "radar charts" sheet cntaining 62 radar charts for all none-auxiliary metrics  
+    - "Reading box plots" sheet with box-and-whisker plots for readability metrics (with respectively re-arranged data from the summary sheet)
+    - "Quality box plots" sheet with box-and-whisker plots for percentage-based quality metrics (with respectively re-arranged data from the summary sheet)
+    - "Spearman Correl" sheet with a correlation matrix for spearman rank correlation over all metrics in the summary sheet (n=30, values significant at α=0.01 in green, α=0.05 in yellow)
+    - "Pearson Correl" sheet with a correlation matrix for pearson correlation over all metrics in the summary sheet (significant values in green, however not applicable as most values are not normally distributed)
+    - "Readability bar charts indiv" sheet with bar charts of readability metrics
+    - "Readability bar charts all" sheet with aggregated bar charts of readability metrics
+    - "Quality Line charts" sheet with line charts of percentage-based quality metrics
+    - "Quality bar chart" sheet with bar charts of percentage-based quality metrics
+    - and additional sheets with aggregated bar charts over all qualities per document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS)
 
   - The TemplateComparison_calculatedMetrics.xlsx file. It contains requirement quality metrics assessed using python code. 
 
