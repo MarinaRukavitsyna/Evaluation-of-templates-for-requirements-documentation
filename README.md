@@ -29,12 +29,13 @@ The repository contains different artifacts:
 
 The repository contains two folders: 
 
-- Source: Python code to evaluate 14 particular metrics, details under "Usage Instructions". 
+- Source: Python code (Quality metrics.ipynb) to evaluate 14 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
+  -  metric_definitions.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of six phrasing guidelines)
   - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
-    - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates, boilerplates (DODT), SPIDER) + one "Empty Sheet" as a template for extension. Each such sheet contains
-      - one row per requirement with its id, text and 53 assessed quality metrics (19 manually, 20 Excel formula, 13 Python tool)
-      - a header with 72 aggregated metrics for the whole requirement set (1 Python tool, 12 readability formaly web tool, 59 Excel formula)  
+    - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates, boilerplates (DODT), SPIDER) as "document name" + "template name" and one "Empty Sheet" as a template for extension. Each such sheet contains
+      - one row per requirement with its id, text and 53 assessed quality metrics, e.g., # counts and ? bools 1-positive/0-negative, (19 manually, 20 Excel formula, 13 Python tool)
+      - a header with 72 aggregated metrics for the whole requirement set, e.g., Σ sums and Ø averages (1 Python tool, 12 readability formaly web tool, 59 Excel formula)
     - "Summary" sheet summarizing the metrics per set in a comapartive overview together with averages and other statistical values   
     - "radar charts" sheet cntaining 62 radar charts for all none-auxiliary metrics  
     - "Reading box plots" sheet with box-and-whisker plots for readability metrics (with respectively re-arranged data from the summary sheet)
@@ -47,24 +48,12 @@ The repository contains two folders:
     - "Quality bar chart" sheet with bar charts of percentage-based quality metrics
     - and additional sheets with aggregated bar charts over all qualities per document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS)
 
-  - The TemplateComparison_calculatedMetrics.xlsx file. It contains requirement quality metrics assessed using python code. 
+  - TemplateComparison_calculatedMetrics.xlsx, an auxiliary file contains requirement quality metric results from the Python tool
 
-  - The questionnaire_usertestS2_ears_first.pdf file contains questionnaire for users regarding requirement template systems. The results were used as one of the references for the current research. 
+  - questionnaire_usertestS2_ears_first.pdf, questionnaire from the user experiment (S2) on requirements reading and writing with EARS and MASTER (variant EARS first) 
 
-  - The usertests.xlsx file contains respondent answers. 
+  - usertests.xlsx, raw data answers and charts from responses to the user experiment S2 
 
-The "TemplateComparisonAnalytics.xlsx" document description is presented below:  
-
-- The document has several sheets. Each corresponds to a particular template system of a particular document. The document uses the following notation for sheet names: "document name" + "template name". If requirements are written in a free form, "template name" is equal to "free".  
-- Each template sheet has the following information:  
-  - Most quality metric names have keywords in brackets, which refers to a corresponding quality document and quality number inside that document.  
-  - Some metrics have the question mark at the end (e.g., "no_open_end? (IR9)"). This means true/false questions. Put "1" to the corresponding cell if the answer to the presented question is positive and "0" - if negative.  
-  - Some columns have preset "0" in their cells. This means that values for the corresponding metrics are calculated automatically using EXCEL formulas.  
-  - Some metrics have "#" in the beginning (e.g., "#letters"). They are related to syntactic assessment. Most of the metrics are evaluated automatically using EXCEL formulas. tool.  
-  - Some metrics can be evaluated automatically using Python code. The code can be found in the “Quality metrics.ipynb” file.  
-  - The sheet also contains columns for readability score metrics. The metrics used in the evaluation are accessed per the entire document and not per a separate requirement. So, the results are added to the Summary sheet directly. Some readability score metrics might be accessed per requirement.  
-- Summary sheet contains aggregated information from the sheets with assessed requirements, except readability metrics:  
-- Most metrics, except readability metrics, have references to summary values from other sheets. You do not need to copy-paste the values. If some values are updated in corresponding sheets, values are updated automatically in the Summary sheet. 
 
 ## System Requirements 
 
