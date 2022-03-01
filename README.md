@@ -28,9 +28,9 @@ The repository contains different artifacts:
 
 The repository contains two folders: 
 
-- The Source folder. Here you will find python code to evaluate particular metrics, which can be found in the the "How to evaluate particular quality metrics with python code" section. 
-- The Data folder, which has the following files: 
-  - The TemplateComparisonAnalytics.xlsx file, which contains:
+- Source: Python code to evaluate particular metrics, which can be found in the the "How to evaluate particular quality metrics with python code" section. 
+- Data: contains the files with the actual data
+  - TemplateComparisonAnalytics.xlsx file, which contains:
     - A requirement written in Natural Language (NL) in English.  
     - Transformed requirements written with the selected template systems based on the corresponding NL requirement.  
     - Assessed quality metrics.  
