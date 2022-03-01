@@ -81,9 +81,9 @@ Below, you will find links to instructions on how to install:
 
 ## Usage Instructions 
 
+The data within TemplateComparisonAnalytics.xlsx can be used to compare different template systems used to phrase the different variants of requirements documents among each other. 
 
-
-### How to evaluate particular quality metrics with python code
+## Steps to Reproduce
 
 In the Source folder, there is a python code to evaluate particular quality metrics. The processed metrics have the following header in the "TemplateComparisonAnalytics.xlsx" document: 
 
@@ -114,8 +114,6 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 - Run the code and check the generated TemplateComparison_calculatedMetrics.xlsx document. 
 - You do not need to copy the processed data to the original document. All evaluated data from "TemplateComparison_calculatedMetrics.xlsx" should be linked automatically to "TemplateComparisonAnalytics.xlsx". If not, refresh workbook links. For this, press Data -> Workbook Links -> Refresh. Both files should be in the same folder.
 
-
-## Steps to Reproduce
 
 If you want to extend the document and add more data for analysis, do the following:
 
