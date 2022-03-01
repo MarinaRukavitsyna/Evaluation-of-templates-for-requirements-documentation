@@ -1,14 +1,28 @@
 # Evaluation-of-templates-for-requirements-documentation 
 
+This repository contains data and code related to experimentation on a compartive evaluation of different template notations for requirements documentation in semi-formal natural language.
+
 ## Summary of Artifact 
 
-To check the requirements documents quality and human readability, five documents from different domains were selected for assessment:  
+The repository contains different artifacts:
 
-- The "FLEX" requirements document is related to the aerospace domain.  
-- The "CS E 50" requirements document is related to the aerospace domain.  
-- The "ECSS E60-30" requirements document is related to the aerospace domain.  
-- The "TSS (Time Sheet System)" requirements document. The TSS requirements are written to develop a system to track working hours, vacation, illness, etc. of employees with a monthly income below a certain amount (currently 850) in the university context. This document was written with the help of the MASTeR template.  
-- The "EVS (Electronic Voting Sys)" requirements document. The EVS requirements are written to develop a system for electronic polls in the university context. This document was written with the help of the MASTeR template. 
+- A corpus of natural language requirements from five different projects in different domains:
+  - The "FLEX" requirements document is a system level specifiaction from a space flight/satellite project.  
+  - The "CS E 50" requirements document (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
+  - The "ECSS E60-30" requirements document is an ECSS standard from the aerospace domain.  
+  - The "TSS (Time Sheet System)" requirements document specifies a work hour management system for student reasearch assistents at universities. (The requirements loosely follow the MASTeR Templates)  
+  - The "EVS (Electronic Voting Sys)" requirements document specifies a system for electronic polls in the university context. (The requirements loosely follow the MASTeR Templates)
+  - Each of the above requirements sets rephrased into six different template notations respectively
+    - "Easy Approach to Requirements Syntax (EARS)"
+    - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
+    - "Advanced-EARS"
+    - "Boilerplates" (Hull et al.)
+    - "Bolierplates" (DODT)
+- A metric suite with metrics to measure quality factors relevant to compare requirement template performance
+  -  Metric definitions
+  -  Tool support for metric calculation
+  -  Calculated + manually evaluated metric values for the given requirement corpus
+  -  Statistics and charts for metric analysis
 
 ## Description of Artifact 
 
