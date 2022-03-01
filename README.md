@@ -60,9 +60,9 @@ The "TemplateComparisonAnalytics.xlsx" document description is presented below:
 ## System Requirements 
 
  
-- To open .xlsx files, it is required to have Microsoft Office installed on your machine.  
-- To open .pdf files, it is required to have Adobe Reader or any browser that supports PDF reading installed on your machine. 
-- To run python code, it is required to have Anaconda installed on your machine. The following libraries are also required:
+- Microsoft Ecxel 2016 or newer (for .xlsx files)  
+- A PDF reader (for .pdf files) 
+- Anaconda for Python (only for metric re-calculation) with the following libraries:
   - pandas 
   - numpy
   - NLTK
@@ -73,7 +73,6 @@ The "TemplateComparisonAnalytics.xlsx" document description is presented below:
  
 ## Installation Instructions 
 
- 
 Below, you will find links to instructions on how to install: 
 - [Microsoft Office](https://support.microsoft.com/en-us/office/download-and-install-or-reinstall-microsoft-365-or-office-2021-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658) 
 - [Adobe Reader](https://helpx.adobe.com/acrobat/kb/install-reader-dc-windows.html)
@@ -81,7 +80,6 @@ Below, you will find links to instructions on how to install:
 - [NLTK](https://www.nltk.org/install.html) 
 - [spaCy](https://spacy.io/usage#installation) 
 - [readability](https://pypi.org/project/readability/) 
-
 
 ## Usage Instructions 
 
