@@ -7,16 +7,15 @@ This repository contains data and code related to experimentation on a compartiv
 The repository contains different artifacts:
 
 - A corpus of natural language requirements from five different projects in different domains (249 requirements):
-  - The "FLEX" requirements document is a system level specifiaction from a space flight/satellite project. 
+  - The "FLEX" requirements document is a system level specifiaction from a space flight/satellite project from ESA. 
   - The "CS E 50" requirements document (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
   - The "ECSS E60-30" requirements document is an ECSS standard from the aerospace domain.  
   - The "TSS (Time Sheet System)" requirements document specifies a work hour management system for student reasearch assistents at universities. (The requirements loosely follow the MASTeR Templates)  
-  - The "EVS (Electronic Voting Sys)" requirements document specifies a system for electronic polls in the university context. (The requirements loosely follow the MASTeR Templates)
-  - Each of the above requirements sets rephrased into six different template notations respectively
+  - The "EVS (Electronic Voting System)" requirements document specifies a system for electronic polls in the university context. (The requirements loosely follow the MASTeR Templates)
+  - Each of the above requirements sets rephrased into five different template notations respectively
     - "Easy Approach to Requirements Syntax (EARS)"
     - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
     - "Advanced-EARS"
-    - "Boilerplates" (Hull et al.)
     - "Bolierplates" (DODT)
     - SPIDER
    - The requirement lists do *not* contain any additional project information or traceability liks
@@ -32,7 +31,7 @@ The repository contains two folders:
 
 - Source: Python code (Quality metrics.ipynb) to evaluate 14 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
-  -  metric_definitions.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of six phrasing guidelines)
+  -  metric_definitions.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines)
   - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
     - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates, boilerplates (DODT), SPIDER) as "document name" + "template name" and one "Empty Sheet" as a template for extension. Each such sheet contains
       - one row per requirement with its id, text and 53 assessed quality metrics, e.g., # counts and ? bools 1-positive/0-negative, (19 manually, 20 Excel formula, 13 Python tool)
@@ -50,10 +49,6 @@ The repository contains two folders:
     - and additional sheets with aggregated bar charts over all qualities per document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS)
 
   - TemplateComparison_calculatedMetrics.xlsx, an auxiliary file contains requirement quality metric results from the Python tool
-
-  - questionnaire_usertestS2_ears_first.pdf, questionnaire from the user experiment (S2) on requirements reading and writing with EARS and MASTER (variant EARS first) 
-
-  - usertests.xlsx, raw data answers and charts from responses to the user experiment S2 
 
 
 ## System Requirements 
@@ -151,7 +146,7 @@ If you would like to evaluate more metrics via code, do the following:
 
 ## License
 
-Sooftware under MIT License
+Software under MIT License
 
 Copyright (c) 2022
 
