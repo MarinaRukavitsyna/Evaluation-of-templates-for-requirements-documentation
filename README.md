@@ -32,6 +32,7 @@ The repository contains two folders:
 - Source: Python code (Quality metrics.ipynb) to evaluate 14 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
   -  metric_definitions.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines)
+  -  two sunburst diagrams "QualityAttributes.png" and "RulesPerGuideline.png" illustrating the attribution of evaluated metrics to quality attributes and the conformance to phrasing guidelines as described in "metric_definitions.pdf"
   - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
     - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and 5 random groups (Random1, ..)
 	and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates (DODT), SPIDER) 
