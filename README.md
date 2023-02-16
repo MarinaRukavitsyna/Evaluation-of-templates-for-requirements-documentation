@@ -70,6 +70,10 @@ The repository contains two folders:
   - Matcher
   - re
   - readability 
+  - PassivePy
+  - syllapy
+  - stemming
+  - quantulum3
  
 ## Installation Instructions 
 
@@ -80,6 +84,10 @@ Below, you will find links to instructions on how to install:
 - [NLTK](https://www.nltk.org/install.html) 
 - [spaCy](https://spacy.io/usage#installation) 
 - [readability](https://pypi.org/project/readability/) 
+- [PassivePy](https://pypi.org/project/PassivePy/)
+- [syllapy](https://github.com/mholtzscher/syllapy)
+- [stemming](https://pypi.org/project/stemming/)
+- [quantulum3](https://github.com/nielstron/quantulum3)
 
 ## Usage Instructions 
 
