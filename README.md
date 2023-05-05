@@ -24,10 +24,11 @@ The repository contains different artifacts:
   -  Tool support for metric calculation
   -  Calculated + manually evaluated metric values for the given requirement corpus
   -  Statistics and charts for metric analysis
+- A corpus of two natural language requirements re-written by 43 test subjects following "Easy Approach to Requirements Syntax (EARS)" and "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)" respectively
 
 ## Description of Artifact 
 
-The repository contains two folders: 
+The repository contains three folders: 
 
 - Source: Python code (Quality metrics.ipynb) to evaluate 14 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
@@ -55,6 +56,8 @@ The repository contains two folders:
     - and additional sheets with aggregated bar charts over all qualities per document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS)
 
   - TemplateComparison_calculatedMetrics.xlsx, an auxiliary file contains requirement quality metric results from the Python script
+- UserTestEval: Application of the above described metric suite in Python/Excel to test subject written requirements. Contains again "Source" and "Data" folders with simplified versions of the above described script and .xlsx files (without random groups, sorted not by document but test subject background)
+ 
 
 
 ## System Requirements 
@@ -158,7 +161,9 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 	Sheets after the Summary sheet will not be processed, for sheets "Randomxx" only F-Score is calculated. 
 4. Run the code and check the generated TemplateComparison_calculatedMetrics.xlsx document. 
 5. You do not need to copy the processed data to the original document. All evaluated data from "TemplateComparison_calculatedMetrics.xlsx" should be linked automatically to "TemplateComparisonAnalytics.xlsx". If not, refresh workbook links. For this, press Data -> Workbook Links -> Refresh. Both files should be in the same folder.
-6. Check all 0 values in "TemplateComparison_calculatedMetrics.xlsx" for false positives, in particular "no_comparison? (R13)", "units? (R16)", and "value_tolerance? (R35)", and potentially manually change them to a 1
+6. Check all 0 values in "TemplateComparison_calculatedMetrics.xlsx" for false positives, in particular "no_comparison? (R13)", "units? (R16)", "value_tolerance? (R35)", and "no_vague_terms? (R17)", and potentially manually change them to 1
+
+Generally the same procedure applies for the data in "UserTestEval"
  
 
 ### Steps to extend the analysis 
