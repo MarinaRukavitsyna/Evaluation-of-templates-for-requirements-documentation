@@ -161,7 +161,7 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 	Sheets after the Summary sheet will not be processed, for sheets "Randomxx" only F-Score is calculated. 
 4. Run the code and check the generated TemplateComparison_calculatedMetrics.xlsx document. 
 5. You do not need to copy the processed data to the original document. All evaluated data from "TemplateComparison_calculatedMetrics.xlsx" should be linked automatically to "TemplateComparisonAnalytics.xlsx". If not, refresh workbook links. For this, press Data -> Workbook Links -> Refresh. Both files should be in the same folder.
-6. Check all 0 values in "TemplateComparison_calculatedMetrics.xlsx" for false positives, in particular "no_comparison? (R13)", "units? (R16)", "value_tolerance? (R35)", and "no_vague_terms? (R17)", and potentially manually change them to 1
+6. Check all 0 values in "TemplateComparison_calculatedMetrics.xlsx" for false positives, in particular "no_comparison? (R13)", "units? (R16)", and "value_tolerance? (R35)", and potentially manually change them to 1
 
 Generally the same procedure applies for the data in "UserTestEval"
  
