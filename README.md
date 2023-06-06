@@ -16,7 +16,7 @@ The repository contains different artifacts:
     - "Easy Approach to Requirements Syntax (EARS)"
     - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
     - "Advanced-EARS"
-    - "Bolierplates" (DODT)
+    - "Boilerplates" (DODT)
     - SPIDER
    - The requirement lists do *not* contain any additional project information or traceability liks
 - A metric suite with metrics to measure quality factors relevant to compare requirement template performance
