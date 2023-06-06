@@ -32,7 +32,7 @@ The repository contains different artifacts:
 
 The repository contains two folders: 
 
-- Source: Python code (Quality metrics.ipynb) to evaluate 14 particular metrics, details under "Usage Instructions". 
+- Source: Python code (Quality metrics.ipynb) to evaluate 19 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
   -  metric_definitions_and_results.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines) and results in effects sizes comparing the five template systems with free text.
   -  two sunburst diagrams "QualityAttributes.png" and "RulesPerGuideline.png" illustrating the attribution of evaluated metrics to quality attributes and the conformance to phrasing guidelines as described in "metric_definitions_and_results.pdf"
@@ -191,7 +191,7 @@ If you would like to evaluate more metrics via code, do the following:
 
 Software under MIT License
 
-Copyright (c) 2022-2023
+Copyright (c) 2022-2023 Katharina Großer, Marina Rukavitsyna, Jan Jürjens
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
