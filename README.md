@@ -1,4 +1,4 @@
-# Evaluation-of-templates-for-requirements-documentation 
+# Evaluation of Templates for Requirements Documentation 
 
 This repository contains data and code related to experimentation on a compartive evaluation of different template notations for requirements documentation in semi-formal natural language.
 
