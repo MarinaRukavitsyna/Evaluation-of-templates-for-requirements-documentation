@@ -6,24 +6,24 @@ This repository contains data and code related to experimentation on a compartiv
 
 The repository contains different artifacts:
 
-- A corpus of natural language requirements from five different projects in different domains (249 requirements):
+- A **corpus of natural language requirements** from five different projects in different domains (249 requirements):
   - "FLEX" is a system level specifiaction from a space flight/satellite project from ESA. 
   - "CS E 50" (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
   - "ECSS E60-30" is an ECSS standard from the aerospace domain.  
   - "TSS" (Time Sheet System) is a specification of a work hour management system for student reasearch assistents at universities*. (The requirements loosely follow the MASTeR Templates)  
   - "EVS" (Electronic Voting System) is a specification of a system for electronic polls in the university context*. (The requirements loosely follow the MASTeR Templates)
   - (*both university projects (TSS & EVS) are actually implemented in practical courses based on these requirements)
-  - Each of the above requirements sets rephrased into five different template notations respectively
+  - Each of the above requirements sets **rephrased into five different template notations** respectively (in total 1764 requirements)
     - "Easy Approach to Requirements Syntax (EARS)"
     - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
     - "Advanced-EARS"
     - "Boilerplates" (DODT)
     - "SPIDER"
    - The requirement lists do *not* contain any additional project information or traceability links
-- A metric suite with metrics to measure quality factors relevant to compare requirement template performance
-  -  Metric definitions
-  -  Tool support for metric calculation
-  -  Calculated + manually evaluated metric values for the given requirement corpus
+- A **metric suite** with metrics to measure quality factors relevant to compare requirement template performance
+  -  **Metric definitions**
+  -  **Tool support** for metric calculation
+  -  Calculated + manually evaluated metric **values for the given requirement corpus**
   -  Statistics and charts for metric analysis
 
 
