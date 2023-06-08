@@ -1,4 +1,4 @@
-# Evaluation-of-templates-for-requirements-documentation 
+# Evaluation of Templates for Requirements Documentation 
 
 This repository contains data and code related to experimentation on a compartive evaluation of different template notations for requirements documentation in semi-formal natural language.
 
@@ -6,30 +6,33 @@ This repository contains data and code related to experimentation on a compartiv
 
 The repository contains different artifacts:
 
-- A corpus of natural language requirements from five different projects in different domains (249 requirements):
-  - The "FLEX" requirements document is a system level specifiaction from a space flight/satellite project from ESA. 
-  - The "CS E 50" requirements document (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
-  - The "ECSS E60-30" requirements document is an ECSS standard from the aerospace domain.  
-  - The "TSS (Time Sheet System)" requirements document specifies a work hour management system for student reasearch assistents at universities. (The requirements loosely follow the MASTeR Templates)  
-  - The "EVS (Electronic Voting System)" requirements document specifies a system for electronic polls in the university context. (The requirements loosely follow the MASTeR Templates)
-  - Each of the above requirements sets rephrased into five different template notations respectively
+- A **corpus of natural language requirements** from five different projects in different domains (249 requirements):
+  - "FLEX" is a system level specifiaction from a space flight/satellite project from ESA. 
+  - "CS E 50" (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
+  - "ECSS E60-30" is an ECSS standard from the aerospace domain.  
+  - "TSS" (Time Sheet System) is a specification of a work hour management system for student reasearch assistents at universities*. (The requirements loosely follow the MASTeR Templates)  
+  - "EVS" (Electronic Voting System) is a specification of a system for electronic polls in the university context*. (The requirements loosely follow the MASTeR Templates)
+  - (*both university projects (TSS & EVS) are actually implemented in practical courses based on these requirements)
+  - Each of the above requirements sets **rephrased into five different template notations** respectively (in total 1764 requirements)
     - "Easy Approach to Requirements Syntax (EARS)"
     - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
     - "Advanced-EARS"
-    - "Bolierplates" (DODT)
-    - SPIDER
-   - The requirement lists do *not* contain any additional project information or traceability liks
-- A metric suite with metrics to measure quality factors relevant to compare requirement template performance
-  -  Metric definitions
-  -  Tool support for metric calculation
-  -  Calculated + manually evaluated metric values for the given requirement corpus
+    - "Boilerplates" (DODT)
+    - "SPIDER"
+   - The requirement lists do *not* contain any additional project information or traceability links
+- A **metric suite** with metrics to measure quality factors relevant to compare requirement template performance
+  -  **Metric definitions**
+  -  **Tool support** for metric calculation
+  -  Calculated + manually evaluated metric **values for the given requirement corpus**
   -  Statistics and charts for metric analysis
+
+
 
 ## Description of Artifact 
 
 The repository contains two folders: 
 
-- Source: Python code (Quality metrics.ipynb) to evaluate 14 particular metrics, details under "Usage Instructions". 
+- Source: Python code (Quality metrics.ipynb) to evaluate 19 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
   -  metric_definitions_and_results.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines) and results in effects sizes comparing the five template systems with free text.
   -  two sunburst diagrams "QualityAttributes.png" and "RulesPerGuideline.png" illustrating the attribution of evaluated metrics to quality attributes and the conformance to phrasing guidelines as described in "metric_definitions_and_results.pdf"
@@ -60,9 +63,9 @@ The repository contains two folders:
 ## System Requirements 
 
  
-- Microsoft Ecxel 2016 or newer (for .xlsx files)  
-- A PDF reader (for .pdf files) 
-- Anaconda for Python (only for metric re-calculation) with the following libraries:
+- For .xlsx data files: Microsoft Ecxel 2016 or newer 
+- For .pdf files: A PDF reader
+- For metric (re-)calculation: Python + Jupyter Notebook (e.g. via Anaconda for Python) with the following libraries:
   - pandas 
   - numpy
   - NLTK
@@ -74,6 +77,10 @@ The repository contains two folders:
   - syllapy
   - stemming
   - quantulum3
+
+Instructions how to install respective packages and load language models are linked in the next section.
+
+We recommend to setup a new clean python environment.
  
 ## Installation Instructions 
 
@@ -82,6 +89,7 @@ Below, you will find links to instructions on how to install:
 - [Adobe Reader](https://helpx.adobe.com/acrobat/kb/install-reader-dc-windows.html)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/windows/) 
 - [NLTK](https://www.nltk.org/install.html) 
+  - uncommend the line in cell 1 after import of NLTK to specify which models to download
 - [spaCy](https://spacy.io/usage#installation) 
 - [readability](https://pypi.org/project/readability/) 
 - [PassivePy](https://pypi.org/project/PassivePy/)
@@ -179,16 +187,29 @@ If you want to extend the document and add more data for analysis, do the follow
 If you would like to evaluate more metrics via code, do the following: 
 
 - Add a new function to the “Quality metrics.ipynb” file, which accepts a requirement text as a parameter. 
-- Add an evaluated column header name to the cell 20 "# Excel sheet column names used for calculation" 
-- Call this function in cell 21. 
-- Add the processed column header name to the df.to_excel function in cell 22 to write it to the output file. 
+- Add an evaluated column header name to the cell 24 "# Excel sheet column names used for calculation" 
+- Call this function in cell 25. 
+- Add the processed column header name to the df.to_excel function in cell 26 to write it to the output file. 
 - Add links to the corresponding cells between "TemplateComparison_calculatedMetrics.xlsx" and "TemplateComparisonAnalytics.xlsx" documents to automatically copy evaluated data to the "TemplateComparisonAnalytics.xlsx" document 
+
+## Related Publications
+
+- Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "A Comparative Evaluation of RequirementTemplate Systems", In: 31st IEEE International Requirements Engineering Conference (RE'23), 2023
+
+Related Student Thesis
+- Marina Rukavitsyna. "Linguistic comparative evaluation of template-systems for requirements documentation". Master's thesis. University of Koblenz-Landau, 2021.
+- Christian Braun. "Vergleichende Bewertung von Template-Systemen für die Anforderungsdokumentation". German. Bachelor thesis. University of Koblenz-Landau, 2019.
+- Francisco José Caballero Cerezo. "Comparative evaluation of template-systems for requirements documentation". Bachelor thesis. University of Koblenz-Landau, 2016.
+
+## How to Cite
+
+Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "Evaluation of Templates for Requirements Documentation", 2023, DOI: 
 
 ## License
 
 Software under MIT License
 
-Copyright (c) 2022-2023
+Copyright (c) 2022-2023 Katharina Großer, Marina Rukavitsyna, Jan Jürjens
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
