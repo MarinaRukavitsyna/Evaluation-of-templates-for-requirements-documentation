@@ -91,6 +91,7 @@ Below, you will find links to instructions on how to install:
 - [NLTK](https://www.nltk.org/install.html) 
   - uncommend the line in cell 1 after import of NLTK to specify which models to download
 - [spaCy](https://spacy.io/usage#installation) 
+  - download trained pipelines "en_core_web_sm" and "en_core_web_lg"
 - [readability](https://pypi.org/project/readability/) 
 - [PassivePy](https://pypi.org/project/PassivePy/)
 - [syllapy](https://github.com/mholtzscher/syllapy)
