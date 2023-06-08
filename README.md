@@ -63,9 +63,9 @@ The repository contains two folders:
 ## System Requirements 
 
  
-- Microsoft Ecxel 2016 or newer (for .xlsx files)  
-- A PDF reader (for .pdf files) 
-- Anaconda for Python (only for metric re-calculation) with the following libraries:
+- For .xlsx data files: Microsoft Ecxel 2016 or newer 
+- For .pdf files: A PDF reader
+- For metric (re-)calculation: Python + Jupyter Notebook (e.g. via Anaconda for Python) with the following libraries:
   - pandas 
   - numpy
   - NLTK
@@ -77,6 +77,10 @@ The repository contains two folders:
   - syllapy
   - stemming
   - quantulum3
+
+Instructions how to install respective packages and load language models are linked in the next section.
+
+We recommend to setup a new clean python environment.
  
 ## Installation Instructions 
 
@@ -85,6 +89,7 @@ Below, you will find links to instructions on how to install:
 - [Adobe Reader](https://helpx.adobe.com/acrobat/kb/install-reader-dc-windows.html)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/windows/) 
 - [NLTK](https://www.nltk.org/install.html) 
+  - uncommend the line in cell 1 after import of NLTK to specify which models to download
 - [spaCy](https://spacy.io/usage#installation) 
 - [readability](https://pypi.org/project/readability/) 
 - [PassivePy](https://pypi.org/project/PassivePy/)
@@ -182,10 +187,23 @@ If you want to extend the document and add more data for analysis, do the follow
 If you would like to evaluate more metrics via code, do the following: 
 
 - Add a new function to the “Quality metrics.ipynb” file, which accepts a requirement text as a parameter. 
-- Add an evaluated column header name to the cell 20 "# Excel sheet column names used for calculation" 
-- Call this function in cell 21. 
-- Add the processed column header name to the df.to_excel function in cell 22 to write it to the output file. 
+- Add an evaluated column header name to the cell 24 "# Excel sheet column names used for calculation" 
+- Call this function in cell 25. 
+- Add the processed column header name to the df.to_excel function in cell 26 to write it to the output file. 
 - Add links to the corresponding cells between "TemplateComparison_calculatedMetrics.xlsx" and "TemplateComparisonAnalytics.xlsx" documents to automatically copy evaluated data to the "TemplateComparisonAnalytics.xlsx" document 
+
+## Related Publications
+
+- Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "A Comparative Evaluation of RequirementTemplate Systems", In: 31st IEEE International Requirements Engineering Conference (RE'23), 2023
+
+Related Student Thesis
+- Marina Rukavitsyna. "Linguistic comparative evaluation of template-systems for requirements documentation". Master's thesis. University of Koblenz-Landau, 2021.
+- Christian Braun. "Vergleichende Bewertung von Template-Systemen für die Anforderungsdokumentation". German. Bachelor thesis. University of Koblenz-Landau, 2019.
+- Francisco José Caballero Cerezo. "Comparative evaluation of template-systems for requirements documentation". Bachelor thesis. University of Koblenz-Landau, 2016.
+
+## How to Cite
+
+Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "Evaluation of Templates for Requirements Documentation", 2023, DOI: 
 
 ## License
 
